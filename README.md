@@ -33,6 +33,18 @@
 
 ![Device successfully connected](media/device-overview.png)
 
+## Run code
+
+To run your code on the microcontroller, first follow the connection steps above, then open `src/main.ts` and press the run button in the upper-right corner.
+
+1. Follow the steps for connecting the microcontroller above.
+2. Open `src/main.ts`
+3. Press the run button in the upper-right corner (1)*
+4. A panel should appear on the bottom or right side of the screen (2). The panel shows the output of your code (e.g., any `console.log`s in your code).
+5. VS Code may prompt to start the DeviceScript simulator. You can press "Don't show again". If you're interested in simulation, learn more [here](https://microsoft.github.io/devicescript/developer/simulation).
+
+![Alt text](media/run-code.png)
+
 ## Flashing the microcontroller
 
 The microcontroller comes pre-flashed with the DeviceScript firmware. An update to DeviceScript might require you to re-flash the microcontroller.
