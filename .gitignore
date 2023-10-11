@@ -2,3 +2,4 @@ node_modules
 .devicescript
 .env.local
 .env.*.local
+.DS_Store

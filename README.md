@@ -39,11 +39,12 @@ To run your code on the microcontroller, first follow the connection steps above
 
 1. Follow the steps for connecting the microcontroller above.
 2. Open `src/main.ts`
-3. Press the run button in the upper-right corner (1)*
+3. Press the run button in the upper-right corner (1)
 4. A panel should appear on the bottom or right side of the screen (2). The panel shows the output of your code (e.g., any `console.log`s in your code).
 5. VS Code may prompt to start the DeviceScript simulator. You can press "Don't show again". If you're interested in simulation, learn more [here](https://microsoft.github.io/devicescript/developer/simulation).
+6. To stop the output, disconnect the device, or press `Ctrl+C` in the output panel (2)
 
-![Alt text](media/run-code.png)
+![](media/run-code.png)
 
 ## Flashing the microcontroller
 
@@ -52,15 +53,23 @@ The microcontroller comes pre-flashed with the DeviceScript firmware. An update 
 1. Connect the microcontroller to your computer using a USB-C cable
 2. Open the [Command Palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette) (`Command+Shift+P` on Mac, `Ctrl+Shift+P` on Windows and Linux) and enter "flash".
 
-![Alt text](media/flash.png)
+![](media/flash.png)
 
-3. Select `DeviceScript: Flash Firmware...`
-4. You'll be prompted to select a device, search for "seeed studio" and select `Seeed Studio XIAO ESP32C3`
+1. Select `DeviceScript: Flash Firmware...`
+2. You'll be prompted to select a device, search for "seeed studio" and select `Seeed Studio XIAO ESP32C3`
 
-![Alt text](media/flash-2.png)
+![](media/flash-2.png)
 
-5. A command prompt should appear on the bottom or the side of your editor, wait until it says "flash OK". You can now reconnect to the device.
+3. A command prompt should appear on the bottom or the side of your editor, wait until it says "flash OK". You can now reconnect to the device.
 
-![Alt text](media/flash-success.png)
+![](media/flash-success.png)
 
 If you're experiencing any problems you can try to clean the flash, follow steps 1 and 2, and select `DeviceScript: Clean Flash...`.
+
+## Project 1: Blinky
+
+![](media/blinky.jpeg)
+
+For the first project we'll create what is known as the "hello world" for hardware, we'll make a LED blink!
+
+!!!TODO: insert schematics here
