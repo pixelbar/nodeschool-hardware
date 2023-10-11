@@ -73,3 +73,24 @@ If you're experiencing any problems you can try to clean the flash, follow steps
 For the first project we'll create what is known as the "hello world" for hardware, we'll make a LED blink!
 
 !!!TODO: insert schematics here
+
+Connect the components according to the schematic displayed above.
+
+You can find the code for this project in `src/blinky.ts`. To run the code, replace the contents of `src/main.ts` with `import "./blinky";`. Play around with the code, change the interval in which the LED blinks up.
+
+## Project 2: Input
+
+We'll now use a button to make the LED light up.
+
+!!!TODO: insert schematics here
+
+You can find the code for this project in `src/blinky.ts`. To run the code, replace the contents of `src/main.ts` with `import "./input";`. Play around with the code, e.g., have the LED light up in a certain pattern (morse), or let the LED blink in a certain interval based on how long you press the button for (advanced).
+
+## Project 3: PIM
+
+!!!TODO: insert image of PIM board
+
+Now let's connect PIM. PIM is a custom designed PCB, it contains 4 buttons and 4 LEDs. 
+
+!!!TODO: insert schematics here
+
