@@ -1,14 +1,23 @@
-# NodeSchool Rotterdam - JavaScript × Hardware workshop
+# NodeSchool Rotterdam
 
-## Prerequisites
+[![](media/title.png)](https://www.meetup.com/nodeschool-rotterdam/events/296236108/)
+
+_This information is for the workshop given on Oct. 31st at [Pixelbar](https://pixelbar.nl), The Netherlands._
+
+[👀 Prerequisites](#rerequisites) •
+[📚 Getting started](#getting-started) •
+[⚡️ Connecting the microcontroller to your computer](#rerequisites) •
+[👨‍💻 Run code](#rerequisites)
+
+## 👀 Prerequisites
 
 - Microcontroller: Seeed Studio XIAO ESP32C3
 - Components: breadboard, wires, LEDs, buttons, and PIM board
 - USB-C cable to connect microcontroller to your computer
 - A computer
-- Basic JavaScript knowledge (!!!TODO: link to learn)
+- Basic JavaScript knowledge: [JS for cats](http://jsforcats.com/)
 
-## Getting started
+## 📚 Getting started
 
 1. [Install Node.js](https://nodejs.org/en/download) (v18 recommended, check by running `node -v` in your terminal)
 2. Install [Visual Studio Code](https://code.visualstudio.com)
@@ -20,7 +29,7 @@
 6. Install dependencies
    - Run in terminal: `npm install`
 
-## Connecting the microcontroller to your computer
+## 🚀 Connecting the microcontroller to your computer
 
 1. Connect the microcontroller to your computer using a USB-C cable
 2. Open Visual Studio Code, make sure you have the DeviceScript extension installed
@@ -33,7 +42,7 @@
 
 ![Device successfully connected](media/device-overview.png)
 
-## Run code
+## 👨‍💻 Run code
 
 To run your code on the microcontroller, first follow the connection steps above, then open `src/main.ts` and press the run button in the upper-right corner.
 
@@ -46,7 +55,7 @@ To run your code on the microcontroller, first follow the connection steps above
 
 ![](media/run-code.png)
 
-## Flashing the microcontroller
+## ⚡️ Flashing the microcontroller
 
 The microcontroller comes pre-flashed with the DeviceScript firmware. An update to DeviceScript might require you to re-flash the microcontroller.
 
@@ -72,7 +81,7 @@ If you're experiencing any problems you can try to clean the flash, follow steps
 
 For the first project we'll create what is known as the "hello world" for hardware, we'll make a LED blink!
 
-!!!TODO: insert schematics here
+![](media/lesson_1.png)
 
 Connect the components according to the schematic displayed above.
 
@@ -82,15 +91,24 @@ You can find the code for this project in `src/blinky.ts`. To run the code, repl
 
 We'll now use a button to make the LED light up.
 
-!!!TODO: insert schematics here
+![](media/lesson_2.png)
 
 You can find the code for this project in `src/blinky.ts`. To run the code, replace the contents of `src/main.ts` with `import "./input";`. Play around with the code, e.g., have the LED light up in a certain pattern (morse), or let the LED blink in a certain interval based on how long you press the button for (advanced).
 
 ## Project 3: PIM
 
-!!!TODO: insert image of PIM board
+Now let's connect PIM. PIM is a custom designed PCB - which means you don't need a breadboard anymore. It contains 4 buttons and 4 LEDs through very tiny components. You can find the code for this project in `src/pim.ts`. To run the code, replace the contents of `src/main.ts` with `import "./pim";`.
 
-Now let's connect PIM. PIM is a custom designed PCB, it contains 4 buttons and 4 LEDs. 
+You can do a lot, like including the previous examples - or running it as is, which is the the game called Simon!
 
-!!!TODO: insert schematics here
+## Project 4: it's your turn!
 
+DeviceScript has great documentation and examples. Check out [their site](https://microsoft.github.io/devicescript/samples/temperature-mqtt) to get going. Beware, this documentation is not specifically made for the hardware you have. So unfortunately it's not a matter of starting a script, or copying-and-pasting. To understand which connectors need to go where you can check out this overview of the ESP32C3:
+
+![](media/esp.png)
+
+The sensor the measure temperature is the [SHT30](https://microsoft.github.io/devicescript/api/drivers/sht30). If you look closely on the board, you will a few things laid out. Don't worry too much if you haven't paid attention during your physics class. It's just a matter of reading (see the schema above, and read the text on the SHT30)!
+
+The goal is: **connect a temperature sensor to the microcontroller and send the temperature to an MQTT broker** like [Adafruit MQTT](https://learn.adafruit.com/adafruit-io/mqtt-api). MQTT is a protocol specifically designed to send and receive small messages, especially dealing with devices. You can use the [MQTT Explorer](http://mqtt-explorer.com/) to see the messages being sent.
+
+Now you can measure and read the temperature anywhere!
