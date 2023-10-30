@@ -97,15 +97,22 @@ You can find the code for this project in `src/blinky.ts`. To run the code, repl
 
 ## Project 3: PIM
 
-Now let's connect PIM. PIM is a custom designed PCB - which means you don't need a breadboard anymore. It contains 4 buttons and 4 LEDs through very tiny components. You can find the code for this project in `src/pim.ts`. To run the code, replace the contents of `src/main.ts` with `import "./pim";`.
+Now let's connect PIM. PIM is a custom designed PCB - which means you don't need a breadboard anymore. It contains 4 buttons and 4 LEDs. You can find the code for this project in `src/pim.ts`. To run the code, replace the contents of `src/main.ts` with `import "./pim";`.
 
-You can do a lot, like including the previous examples - or running it as is, which is the the game called Simon!
+The provided example demonstrates the basic functionality of toggling an LED on or off in response to a button press.
+
+Experiment with the code. Some examples of what you can make in order of complexity:
+
+- Let the LEDs light up in sequence or another pattern
+- Create a digital dice roller
+- Create a reaction time game where a random LED serves as the target. You can even post the reaction times to a server to create a high-score list!
+- Simon Says (see `src/simon-says.ts`)
 
 ## Project 4: it's your turn!
 
-DeviceScript has great documentation and examples. Check out [their site](https://microsoft.github.io/devicescript/samples/temperature-mqtt) to get going. Beware, this documentation is not specifically made for the hardware you have. So unfortunately it's not a matter of starting a script, or copying-and-pasting. To understand which connectors need to go where you can check out this overview of the ESP32C3:
+DeviceScript has great documentation and examples. Check out [their website](https://microsoft.github.io/devicescript/samples/temperature-mqtt) to get going. Beware, this documentation is not specifically made for the hardware you have. To understand which connectors need to go where you can check out the pinout reference of the ESP32C3 below.
 
-![](media/esp.png)
+![Seeed Studio XIAO ESP32C3 pinout reference](media/esp.png)
 
 The sensor the measure temperature is the [SHT30](https://microsoft.github.io/devicescript/api/drivers/sht30). If you look closely on the board, you will a few things laid out. Don't worry too much if you haven't paid attention during your physics class. It's just a matter of reading (see the schema above, and read the text on the SHT30)!
 
