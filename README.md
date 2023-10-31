@@ -24,7 +24,7 @@ _This information is for the workshop given on Oct. 31st at [Pixelbar](https://p
 3. Install [DeviceScript](https://marketplace.visualstudio.com/items?itemName=devicescript.devicescript-vscode) extension for Visual Studio Code
 4. Clone or download this project
    - Download: https://github.com/pixelbar/nodeschool-hardware/archive/refs/heads/main.zip
-   - Clone: `git clone https://github.com/pixelbar/nodeschool-ai.git`
+   - Clone: `git clone https://github.com/pixelbar/nodeschool-hardware.git`
 5. Open the cloned directory in Visual Studio Code
 6. Install dependencies
    - Run in terminal: `npm install`
