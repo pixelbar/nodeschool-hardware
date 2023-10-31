@@ -79,43 +79,43 @@ If you're experiencing any problems you can try to clean the flash, follow steps
 
 ![](media/blinky.jpeg)
 
-For the first project we'll create what is known as the "hello world" for hardware, we'll make a LED blink!
+For the first project we'll create what is known as the "hello world" for hardware, we'll make an LED blink!
 
 ![](media/lesson_1.png)
 
 Connect the components according to the schematic displayed above.
 
-You can find the code for this project in `src/blinky.ts`. To run the code, replace the contents of `src/main.ts` with `import "./blinky";`. Play around with the code, change the interval in which the LED blinks up.
+You can find the code for this project in `src/blinky.ts`. To run the code, replace the contents of `src/main.ts` with `import "./blinky";`. Play around with the code, e.g., change the interval in which the LED blinks up.
 
 ## Project 2: Input
+
+![](media/input.jpeg)
 
 We'll now use a button to make the LED light up.
 
 ![](media/lesson_2.png)
 
-You can find the code for this project in `src/blinky.ts`. To run the code, replace the contents of `src/main.ts` with `import "./input";`. Play around with the code, e.g., have the LED light up in a certain pattern (morse), or let the LED blink in a certain interval based on how long you press the button for (advanced).
+You can find the code for this project in `src/blinky.ts`. To run the code, replace the contents of `src/main.ts` with `import "./input";`. Play around with the code, e.g., dim the LED on a button press (tip: add `dimmable: true` to `startLightBulb`).
 
 ## Project 3: PIM
+
+![PIM board connected to ESP32](media/pim.jpeg)
 
 Now let's connect PIM. PIM is a custom designed PCB - which means you don't need a breadboard anymore. It contains 4 buttons and 4 LEDs. You can find the code for this project in `src/pim.ts`. To run the code, replace the contents of `src/main.ts` with `import "./pim";`.
 
 The provided example demonstrates the basic functionality of toggling an LED on or off in response to a button press.
 
-Experiment with the code. Some examples of what you can make in order of complexity:
-
-- Let the LEDs light up in sequence or another pattern
-- Create a digital dice roller
-- Create a reaction time game where a random LED serves as the target. You can even post the reaction times to a server to create a high-score list!
-- Simon Says (see `src/simon-says.ts`)
+Experiment with the code, e.g., make the LEDs blink up in some sequence.
 
 ## Project 4: it's your turn!
 
-DeviceScript has great documentation and examples. Check out [their website](https://microsoft.github.io/devicescript/samples/temperature-mqtt) to get going. Beware, this documentation is not specifically made for the hardware you have. To understand which connectors need to go where you can check out the pinout reference of the ESP32C3 below.
+Now it's your turn to play around with the hardware and software! You can extend any of the above projects, or create something new. Here are some ideas:
+
+- Create a digital dice roller with the PIM.
+- Create a reaction time game where a random LED serves as the target. You can even post the reaction times to a server to create a high-score list!
+- Create Simon Says.
+- Create a temperature sensor that publishes to MQTT. A temperature sensor (SHT30) is provided! You can follow this guide: https://microsoft.github.io/devicescript/samples/temperature-mqtt. Note: you'll have to make some adjustments for the hardware provided. MQTT is a protocol specifically designed to send and receive small messages, especially dealing with IoT devices. You can use the [MQTT Explorer](http://mqtt-explorer.com/) to inspect the messages being sent.
+
+Refer to the pinout diagram below when connecting components.
 
 ![Seeed Studio XIAO ESP32C3 pinout reference](media/esp.png)
-
-The sensor the measure temperature is the [SHT30](https://microsoft.github.io/devicescript/api/drivers/sht30). If you look closely on the board, you will a few things laid out. Don't worry too much if you haven't paid attention during your physics class. It's just a matter of reading (see the schema above, and read the text on the SHT30)!
-
-The goal is: **connect a temperature sensor to the microcontroller and send the temperature to an MQTT broker** like [Adafruit MQTT](https://learn.adafruit.com/adafruit-io/mqtt-api). MQTT is a protocol specifically designed to send and receive small messages, especially dealing with devices. You can use the [MQTT Explorer](http://mqtt-explorer.com/) to see the messages being sent.
-
-Now you can measure and read the temperature anywhere!
